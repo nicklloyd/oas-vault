@@ -1,0 +1,33 @@
+get:
+  summary: List
+  operationId: listStores
+  description: List all stores
+  tags:
+    - stores
+  parameters:
+    - $ref: '../parameters/query/limit.yml'
+  responses:
+    '200':
+      description: A paged array of stores
+      headers:
+        x-next:
+          description: A link to the next page of responses
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Store.yml'
+    default:
+      $ref: '../responses/UnexpectedError.yml'
+post:
+  summary: Create
+  operationId: createStores
+  description: Create a pet
+  tags:
+    - stores
+  responses:
+    '201':
+      $ref: '../responses/NullResponse.yml'
+    default:
+      $ref: '../responses/UnexpectedError.yml'

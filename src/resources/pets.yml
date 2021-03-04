@@ -3,9 +3,9 @@ get:
   operationId: listPets
   description: List all pets
   tags:
-  - pets
+    - pets
   parameters:
-    - $ref: "../parameters/query/limit.yaml"
+    - $ref: '../parameters/query/limit.yml'
   responses:
     '200':
       description: A paged array of pets
@@ -17,18 +17,17 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../schemas/Pet.yaml"
+            $ref: '../schemas/Pet.yml'
     default:
-      $ref: "../responses/UnexpectedError.yaml"
+      $ref: '../responses/UnexpectedError.yml'
 post:
   summary: Create
   operationId: createPets
   description: Create a pet
   tags:
-  - pets
+    - pets
   responses:
     '201':
-        $ref : "../responses/NullResponse.yaml"
+      $ref: '../responses/NullResponse.yml'
     default:
-        $ref : "../responses/UnexpectedError.yaml"
-
+      $ref: '../responses/UnexpectedError.yml'

@@ -5,13 +5,13 @@ get:
   tags:
     - pets
   parameters:
-    - $ref: "../parameters/path/petId.yaml"
+    - $ref: '../parameters/path/petId.yml'
   responses:
     '200':
       description: Expected response to a valid request
       content:
         application/json:
           schema:
-            $ref: "../schemas/Pet.yaml"
+            $ref: '../schemas/Pet.yml'
     default:
-      $ref: "../responses/UnexpectedError.yaml"
+      $ref: '../responses/UnexpectedError.yml'

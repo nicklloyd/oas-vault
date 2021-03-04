@@ -1,0 +1,7 @@
+# path
+petId:
+  $ref: './path/petId.yml'
+
+# limit
+limit:
+  $ref: './query/limit.yml'

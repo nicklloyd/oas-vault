@@ -1,0 +1,8 @@
+Pet:
+  $ref: './Pet.yml'
+Store:
+  $ref: './Store.yml'
+Owner:
+  $ref: './Owner.yml'
+Error:
+  $ref: './Error.yml'
